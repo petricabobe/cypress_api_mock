@@ -1,0 +1,12 @@
+{
+  "newUser": {
+    "username": "new.user@example.com",
+    "password": "NewUser123!",
+    "userId": "d1f8c5a2-9b32-4a5c-946b-6e5e4c7e3a10"
+  },
+  "existingUser": {
+    "username": "existing.user@example.com",
+    "password": "ExistingUser456!",
+    "userId": "553a9af1-2c4f-3b18-ec06-adb2abdff65e"
+  }
+}

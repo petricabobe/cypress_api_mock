@@ -1,0 +1,19 @@
+{
+  "name": "cypress_wallet_api",
+  "version": "1.0.0",
+  "description": "Cypress API testing for wallet functionality",
+  "main": "index.js",
+  "scripts": {
+    "mock-api": "prism mock cypress/fixtures/swagger.yaml",
+    "test": "cypress run",
+    "open": "cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@stoplight/prism-cli": "^5.12.0",
+    "cypress": "^14.1.0",
+    "cypress-mochawesome-reporter": "^3.8.2"
+  }
+}
