@@ -4,3 +4,5 @@ cypress/screenshots/
 cypress/reports/
 .idea
 cypress/downloads
+.DS_Store
+cypress/.DS_Store

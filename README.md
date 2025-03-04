@@ -45,3 +45,49 @@ Reports will be available in the `cypress/reports` directory.
 - `cypress/fixtures/users.json` – Contains test users.
 
 ![img.png](img.png)
+
+
+## Test Plan
+
+### Implemented Test Cases
+1. **Verify new wallet**
+   - Verify that new user has one wallet.
+
+2. **Retrieve wallet balance**
+   - Ensure the balance is retrieved correctly after wallet creation.
+
+3. **Create a transaction - Immediate Processing**
+   - A transaction with sufficient balance should be processed immediately (`status: finished`).
+
+4. **Create a transaction - Pending Processing**(Skipped)*
+   - This test was intended to check if a transaction remains "pending" when an external service is slow, but it executes too quickly in the mock environment.
+
+5. **Create a transaction - Insufficient Funds** 
+   - Ensure that transactions fail if the wallet balance is too low.
+
+6. **Create a transaction - Negative Amount **(Skipped)*
+   - Intended to check rejection of negative amounts but is currently skipped.
+
+7. **Retrieve a specific transaction** 
+   - Verify that transaction details can be retrieved by ID.
+
+8. **List all transactions for a wallet** 
+   - Ensure that all transactions appear in the wallet history.
+
+9. **Add a new currency to the wallet**
+   - Validate that multiple currencies can exist in a wallet.
+
+10. **Check wallet contains both initial and new currencies**
+- Ensure a newly added currency does not remove the previous one.
+
+### Unimplemented / Future Test Cases
+1. **Concurrency Handling (Multiple Transactions at Once)**
+   - Ensure that simultaneous transactions are processed correctly without conflicts.
+
+2. **Transaction Reversal**
+   - Validate the ability to reverse a transaction and update the balance accordingly.
+
+3. **Transaction Expiry (Timeout Scenario)**
+   - Test cases for transactions that remain "pending" for too long and get canceled.
+
+---
